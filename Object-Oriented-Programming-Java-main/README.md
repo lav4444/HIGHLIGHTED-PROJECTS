@@ -1,5 +1,0 @@
-# Object-Oriented-Programming-Java
-In this repository I'm sharing codes that were part of an Object Oriented Programming subject at my collage (Zagreb Faculty of Electrical Engineering and Computing).
-
-Basic principles of object-oriented programming and design. Modelling. Reusability. Frameworks for program development. Java programming language. Java as a machine independent platform. Programming tools. Command line tools. Coding conventions. Refactoring. Abstraction. Encapsulation. Classes and objects. Static members. Access modifiers. Constructors. Class relationships. Memory management and garbage collectors. Inheritance. Polymorphism. Abstract classes. Interfaces. Introduction to design patterns. Exceptions. Files and streams. Collections. General collection algorithms. Simple and complex comparators. Generics. Multithreading and multithreaded applications. Events. Development of applications with graphical user interface. Simple and complex graphical components. Development of custom graphical components. Program testing. Program performance analysis. Program optimization.
-
