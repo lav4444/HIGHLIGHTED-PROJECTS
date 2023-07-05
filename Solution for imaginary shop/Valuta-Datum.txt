@@ -1,0 +1,2 @@
+Unesite simbol od valute(EUR, USD, JPY, CAD...) : AUD
+Unesite datum za koji vas zanima tecaj(u formatu YYYY-MM-DD npr. 2022-08-31) : 2003-12-11
