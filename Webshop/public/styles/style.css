@@ -1,0 +1,153 @@
+body {
+    background-color: #abccef;
+  }
+
+
+
+
+  nav {
+    width: 100%;
+    background-color: #009c8a;
+    margin: 0;
+  }
+  
+  .navigationbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    padding: 0 20px;
+    color: #fff;
+  }
+  
+  .navigationbar p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  #logo {
+    margin-right: 20px;
+  }
+
+  .cart-container {
+    position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #0d47a1;
+  }
+  
+  .cart-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cart-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .cart-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .cart-item h2 {
+    font-size: 1.5em;
+    color: #0d47a1;
+    margin-top: 10px;
+  }
+  
+  .cart-item p {
+    font-size: 1.2em;
+    color: #000;
+    margin-top: 10px;
+  }
+
+  .cart-item .gumbi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-item .gumbi button {
+    width: 30px;
+    height: 30px;
+    background-color: #cfe2f3;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.44em;
+    margin: 2px;
+    color: #0d47a1;
+    cursor: pointer;
+  }
+  
+  .cart-item .gumbi button:hover {
+    background-color: #a8c9ed;
+  }
+  
+  .cart-summary {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .cart-summary p {
+    font-size: 1.2em;
+    color: #0d47a1;
+    margin-top: 10px;
+  }
+  .quantity img{
+    height: 16px;
+    filter: opacity(0.5) drop-shadow(0 0 0 red);
+  }
+  
+  #checkout-btn {
+    background-color: #0d47a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+  
+  #checkout-btn:hover {
+    background-color: #0d3781;
+    cursor: pointer;
+  }
+  
+  #clear-cart-btn {
+    background-color: #e6e6e6;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+  
+  #clear-cart-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+
+
+
+  

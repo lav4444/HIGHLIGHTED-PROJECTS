@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanMB Web Dućan</title>
+    <!-- <link rel="stylesheet" href="public/styles/site.css"> -->
+    <link rel="stylesheet" href="/styles/site.css">
+
+
+    <meta name="author" content= "Tomislav Matanović">
+    <meta name="description" content="Web prodaja opreme za kupaonicu imaginarnog poduzeća  CleanMB">
+    <meta name="keywords" content="Kupaonica, Tuš kabine, Tuš, Kada, Kupaonska oprema">
+    <meta http-equiv="refresh" content="180">
+
+</head>
+<body>
+    
+    <div class="container">
+        <nav> 
+            <ul class="navigationbar">
+                <li>
+                    <a href="/">
+                        <img src="/images/GlavniLogo-Kocka-PNG.png" width="60" height="60" 
+                        id=logo alt="Logo image" viewBox="0 0 24 24" />
+                    </a>
+                </li>
+                <div class="navbar__category">
+                  <h1><%= categoryNameNavbar %></h1>
+                </div>
+                <li>
+                    <div class="cart">
+                        <img src="/images/search-icon-transparent-images-vector-15.png" width="20" height="20" />
+                        <a href="/cart/getAll">
+                            <img src="/images/shopping-cart-34.png" width="30" height="30" 
+                            id=cart />
+                        </a>
+                        <div id="cartAmount" class="cartAmount"><%= cartAmountNum %></div>
+                    </div>
+                    
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="main-intro">
+                <h1>Kupaonica<br> iz snova u par klikova!</h1>
+                <p>Pogledajte kolekciju proljeće 2023.</p>
+            </div>
+           
+        </main>
+        <sidebar class="sidebar">
+            <button class="show-categories-button" onclick="window.location.href='/home/getCategories'">Prikaži kategorije</button>
+            <ul class="sidebar__list">
+                
+              <% categories.forEach(category => { %>
+                <li class="sidebar__listitem"></li>
+                <a href="/home/<%= category.name %>" data-category="<%= category.name %>" <% if (category.name === 'Tuš Kade') { %>data-default-category<% } %>><%= category.name %></a>
+                </li>
+              <% }) %>
+            </ul>
+          </sidebar>
+          
+          <% products.forEach(p => { %>
+            <div class="product" style="background-image: url('<%= p.image %>');">
+              <!-- <img src="<%= p.image %>" alt="<%= p.name %>" /> -->
+              <div class="overlay">
+                <h3><%= p.name %></h3>
+                <h2>€ <%= p.price %>,00</h2>
+                <div class="price-quantity">
+                    <div class="pm_buttons">
+                        <img onclick="decrement('<%= p.id %>')" src="/images/25336.png">
+                        <div id="quantity_<%= p.id %>" class="quantity">0</div>
+                        <img onclick="increment('<%= p.id %>')" src="/images/plus-sign-icon-free-png.png">
+                    </div>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+        
+        <contact>
+            <div class="contact">
+            <p>Kontaktirajte nas:</p>
+                <p>Tel: 01 1111 111</p>
+                <p>Mail: cleanMB@fer.hr</p>
+                <form target="_self" action="/" method="GET">
+                <p><label> <input type="text" name="email" value="" placeholder="Newsletter" size="30"></label></p>
+                </form>
+                <input type="button" name=”gumb" value="Pretplati se!"
+                onclick="alert('Uspiješno ste pretplaćeni na Newsletter!')">
+            </div>
+        </contact>
+        <lokacija>
+            <div class="lok">
+                <h1>Kako do nas?</h1>
+                <p>Unska ulica 3, 10000, Zagreb</p>
+            </div>
+           
+        </lokacija>
+        <footer>
+            <div class="footer-container">
+              <div class="footer-logo">
+                <img src="/images/GlavniLogo-Kocka-PNG.png" alt="Logo">
+              </div>
+              <div class="footer-links">
+                <p>ZAPRTITE NAS:<p>
+                <ul>
+                  <li><a href="#">
+                    <img src="/images/1312139.png">
+                  </a></li>
+                  <li><a href="#">
+                    <img src="/images/toppng.com-instagram-color-icon-instagram-social-media-png-instagram-icon-473x473.png">
+                  </a></li>
+                  <li><a href="#">
+                    <img src="/images/toppng.com-linkedin-logo-png-free-2400x2400.png">
+                </a></li>
+                </ul>
+              </div>
+              <div class="footer-text">
+                <!-- <h3>POTRAŽITE NAS:</h3> -->
+                <p>01 1111 111</p>
+                <p>cleanMB@fer.hr</p> 
+                <p>Unska ulica 3, 10000, Zagreb</p>
+            </div>
+          </footer>
+          
+    </div>
+    
+    <script src="/scripts/func.js"></script> 
+</body>
+</html>

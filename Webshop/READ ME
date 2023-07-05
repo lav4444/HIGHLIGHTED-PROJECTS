@@ -1,0 +1,3 @@
+This is my project Webshop web application for imaginary shop. It implements use of sessions, 
+Node.js server + express, dynamically generating html pages using .ejs, data is being stored 
+server side... +CSS and JavaScript of course.

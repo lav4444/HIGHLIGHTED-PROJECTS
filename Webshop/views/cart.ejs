@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <title>Vaša Košarica</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="navigationbar">
+        <a href="/">
+          <img src="/images/GlavniLogo-Kocka-PNG.png" width="60" height="60" id="logo" alt="Logo image" viewBox="0 0 24 24">
+        </a>
+        <p>Hvala na kupovini!</p>
+      </div>
+    </nav>
+    <div class="cart-container">
+      <h1>Vaša Košarica:</h1>
+      <div class="cart-items-container">
+        <% for (const [product, quantity] of cartProducts.entries()) { %>
+          <div class="cart-item">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+            <h2><%= product.name %></h2>
+            <p id="total-item-<%= product.id %>">Ukupno: <%= (quantity * product.price).toFixed(2) %> €</p>            
+            <p id="kol-item-<%= product.id %>">Količina: <%= quantity %></p>
+            <div class="gumbi">
+              <form action="/cart/remove/<%= product.id %>" method="POST">
+                <button type="submit" class="decrease-btn">-</button>
+              </form>
+              <form action="/cart/add/<%= product.id %>" method="POST">
+                <button type="submit" class="increase-btn">+</button>
+              </form>
+            </div>
+          </div>  
+        <% } %>
+      </div>
+
+      <div class="cart-summary">
+        <p>Ukupna Cijena: <span id="total-price"><%= totalPrice.toFixed(2) %></span> €</p>
+        <button id="checkout-btn" onclick="alert('Čestitamo! Vi ste naš 100-ti kupac i osvojili ste iPhone!')">Kupi</button>
+        <form action="/cart/removeAll" method="POST">
+          <button type="submit" id="clear-cart-btn">Isprazni Košaricu</button>
+        </form> 
+      </div>
+    </div>
+    <!-- <script src="/scripts/data.js"></script>  -->
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
